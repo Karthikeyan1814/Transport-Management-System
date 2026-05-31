@@ -1,0 +1,104 @@
+.login-form-layout{
+    border: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px 6px;
+    width: 30%;
+    padding: 3%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+   background-color:lightgoldenrodyellow;
+    border-radius: 10px;
+    box-shadow: 0 8px 26px rgb(0, 0, 0,0.25);
+     font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.logdiv input{
+    box-shadow: none;
+}
+.login-header{
+   margin-left: 4%;
+    height: max-content;
+    padding: 25px;
+    width: 80%;
+    border-radius: 10px;
+    border: none;
+    background-color:lightgoldenrodyellow;
+    box-shadow: 0 8px 25px rgb(0, 0, 0,0.45);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color:rgb(255, 149, 0);
+      font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+    
+}
+/* .admin-container h2{
+    font-family: "Montez", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.admin-container h1{
+     font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+} */
+
+.log-box button{
+    margin: 10px;
+    height:35px;
+    width: max-content;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    background-color: #ff7c60;
+}
+.logdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+   margin-top: 50px;
+   width: 40%;
+   margin-left: 29%;
+   border-radius: 5px;
+   background-color:lightgoldenrodyellow;
+     box-shadow: 0 8px 26px rgb(0, 0, 0,0.25);
+
+}
+.log-box button:hover{
+    transform: scale(1.1);
+}
+.log-box{
+    background:linear-gradient(to bottom right,#fdc639,#ff7c60);
+    height:100vh;
+    width: 100%;
+    padding-top: 3%;
+    font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+.log-box button{
+    transition: all 0.2s ease-in-out;
+}
+.logdiv input{
+        margin: 20px;
+        font-size: larger;
+}
+.logcontainer{
+    width: 100%;
+}
+@media (max-width:640px) {
+    .login-form-layout{
+        width: 300px;
+        top: 40%;
+    }
+    .logdiv{
+        width: 90%;
+    }
+}
