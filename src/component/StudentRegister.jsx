@@ -24,17 +24,22 @@ export default function StudentRegister(){
     
     const studenttriggred=(e)=>{
         e.preventDefault();
-        fetch("https://transport-management-system-backend-production.up.railway.app/SaveStudentDetails",
-            {method:"POST",
-                headers:{
-                      "Content-Type": "application/json"
-                },
-                body:JSON.stringify(studentdata)
-           }
-        )
-        .then(res=> res.text())
-       .then(data=> console.log(data))
-        .catch(err=> console.log(err))
+      fetch(
+ "https://transport-management-system-backend-production.up.railway.app/SaveStudentDetails",
+{
+   method:"POST",
+   headers:{
+      "Content-Type":"application/json"
+   },
+   body:JSON.stringify(studentdata)
+})
+.then(async(res)=>{
+   console.log("Status:",res.status);
+
+   const data=await res.text();
+   console.log(data);
+})
+.catch(err=>console.log(err))
         
     }
 
