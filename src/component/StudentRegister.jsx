@@ -24,7 +24,7 @@ export default function StudentRegister(){
     
     const studenttriggred=(e)=>{
         e.preventDefault();
-        fetch("http://localhost:8080/SaveStudentDetails",
+        fetch("https://transport-management-system-backend-production.up.railway.app/SaveStudentDetails",
             {method:"POST",
                 headers:{
                       "Content-Type": "application/json"

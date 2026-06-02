@@ -19,7 +19,7 @@ export default function LoginPage() {
     const logactive = (e) => {
         e.preventDefault();
         console.log(logdetail)
-        fetch(`http://localhost:8080/logdetails?domain=${logdetail.domain}&email=${logdetail.email}&password=${logdetail.password}`,
+        fetch(`https://transport-management-system-backend-production.up.railway.app/logdetails?domain=${logdetail.domain}&email=${logdetail.email}&password=${logdetail.password}`,
             {
                 method: "POST",
                 headers: {

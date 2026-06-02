@@ -45,7 +45,7 @@ function Admin() {
     const staffrequest = () => {
         console.log("staff request btn triggred")
         setActiveSection("staffreq")
-        fetch("http://localhost:8080/Staffreq")
+        fetch("https://transport-management-system-backend-production.up.railway.app/Staffreq")
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -75,7 +75,7 @@ function Admin() {
         data.append("document", formdata.document);
 
         try {
-            const res = await fetch("http://localhost:8080/Savebusdetails", {
+            const res = await fetch("https://transport-management-system-backend-production.up.railway.app/Savebusdetails", {
                 method: "POST",
                 body: data   // ⚠️ DO NOT set Content-Type
             });

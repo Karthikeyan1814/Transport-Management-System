@@ -20,7 +20,7 @@ export default function StaffRegister() {
  
     const stafftriggred = (e) => {
         e.preventDefault();
-        fetch("http://localhost:8080/SaveStaffDetail",
+        fetch("https://transport-management-system-backend-production.up.railway.app/SaveStaffDetail",
             {
                 method: "POST",
                 headers: {

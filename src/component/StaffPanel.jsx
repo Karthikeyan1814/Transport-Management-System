@@ -10,7 +10,7 @@ export default function StaffPanel() {
         console.log("request btn triggred");
         const value = e.target.value;
         if (value == "0") {
-        fetch("http://localhost:8080/Studentreq")
+        fetch("https://transport-management-system-backend-production.up.railway.app/Studentreq")
             .then(res => res.json())
             .then(data => {
                 console.log(data);
@@ -42,7 +42,7 @@ export default function StaffPanel() {
 
 
     const approve = (id) => {
-        fetch(`http://localhost:8080/ChangeStdapprove?id=${id}`,
+        fetch(`https://transport-management-system-backend-production.up.railway.app/ChangeStdapprove?id=${id}`,
             {
                 method: "PUT",
                 headers: {
@@ -59,7 +59,7 @@ export default function StaffPanel() {
             
     }
     const reject = (id) => {
-        fetch(`http://localhost:8080/ChangeStdreject?id=${id}`,
+        fetch(`https://transport-management-system-backend-production.up.railway.app/ChangeStdreject?id=${id}`,
             {
                 method: "PUT",
                 headers: {
