@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import "./StaffRegister.css"
+import { setStaffs } from "../api/staffsApi"
 export default function StaffRegister() {
 
 
@@ -18,24 +19,34 @@ export default function StaffRegister() {
 
     })
  
-    const stafftriggred = (e) => {
+    const stafftriggred = async(e) => {
         e.preventDefault();
-        fetch("https://transport-management-system-backend-production.up.railway.app/SaveStaffDetail",
-            {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(staffdetail)
-            }
-        )
-            .then(res => res.text())
-            .then(data => {
-                console.log(data);
-                alert("Saved Successfully ✅");
-                window.location.reload();
-            })
-            .catch(err => console.log(err))
+
+        try{
+            const result = await setStaffs(staffdetail);
+            console.log(result);
+            alert("Staff Registration Successfull");
+            setStaff(staffdetail);
+        }catch(error){
+            console.log(error)
+            alert("Somthing Went Wrong !")
+        }
+        // fetch("https://transport-management-system-backend-production.up.railway.app/SaveStaffDetail",
+        //     {
+        //         method: "POST",
+        //         headers: {
+        //             "Content-Type": "application/json"
+        //         },
+        //         body: JSON.stringify(staffdetail)
+        //     }
+        // )
+        //     .then(res => res.text())
+        //     .then(data => {
+        //         console.log(data);
+        //         alert("Saved Successfully ✅");
+        //         window.location.reload();
+        //     })
+        //     .catch(err => console.log(err))
 
     }
 

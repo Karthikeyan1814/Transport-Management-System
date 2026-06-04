@@ -1,14 +1,16 @@
-import Admin from "./component/Admin"
-import StudentRegister from "./component/StudentRegister"
-import LoginPage from "./component/LoginPage"
-import StaffRegister from "./component/StaffRegister"
-import StaffPanel from "./component/StaffPanel"
-import Studentpanel from "./component/Studentpanel"
-import { Route ,Routes } from "react-router-dom"
+// import Admin from "./component/Admin"
+// import StudentRegister from "./component/StudentRegister"
+// import LoginPage from "./component/LoginPage"
+// import StaffRegister from "./component/StaffRegister"
+// import StaffPanel from "./component/StaffPanel"
+// import Studentpanel from "./component/Studentpanel"
+// import { Route ,Routes } from "react-router-dom"
+import "./App.css"
+import SignIn from "./pages/SignIn"
 function App() {
   return (
     <>
-    <Routes>
+    {/* <Routes>
       <Route path="/" element={<LoginPage />}></Route>
       <Route path="/Admin" element={<Admin />}></Route>
       <Route path="/StudentRegister" element={<StudentRegister />}></Route>
@@ -16,7 +18,9 @@ function App() {
       <Route path="/Staffpanel" element={<StaffPanel />}></Route>
       <Route path="/Studentpanel" element={<Studentpanel />}></Route>
       
-    </Routes>
+    </Routes> */}
+
+    <SignIn />
  
     </>
   )

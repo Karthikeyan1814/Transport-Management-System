@@ -3,3 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root{
+  --bgyellow:#EAC23F;
+  --bgblack:#1f1c19;
+  --bgwhite:white;
+  --font1:"Elms Sans", sans-serif;
+  --font2:"Nunito", sans-serif;
+  --font3: "Google Sans", sans-serif;
+  --font4:"Zen Dots", sans-serif;
+}
+
