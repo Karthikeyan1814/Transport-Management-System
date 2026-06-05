@@ -11,5 +11,19 @@
   --font2:"Nunito", sans-serif;
   --font3: "Google Sans", sans-serif;
   --font4:"Zen Dots", sans-serif;
+
+
+
+   --bg-main:#090B12;
+ --bg-secondary:#0D1525;
+ --card:#1C1F28;
+
+ --primary:#F5C400;
+ --primary-hover:#FFD60A;
+ --accent:#FFB000;
+
+ --text:#FFFFFF;
+ --text-secondary:#C8C8C8;
+ --muted:#7A7A7A;
 }
 

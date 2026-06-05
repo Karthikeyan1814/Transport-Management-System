@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 
-export default function Step5({ next, back, data, handleData }) {
+export default function Step5({ next,isbording,submit, back, data, handleData }) {
   const [password, setPassword] = useState({
     password: data.password || "",
     confirmpassword: ""
   });
 
+  const[checkbox,setCheckBox]=useState(false);
   const [passwordMatch, setPasswordMatch] = useState(true);
 
   useEffect(() => {
@@ -30,8 +31,12 @@ export default function Step5({ next, back, data, handleData }) {
     }
   };
 
+ const handleCheckBox = (e) => {
+  setCheckBox(e.target.checked);
+};
   return (
     <>
+      {isbording && <> 
       <label>Department</label>
       <input
         type="text"
@@ -39,6 +44,7 @@ export default function Step5({ next, back, data, handleData }) {
         name="dept"
         onChange={handleData}
       />
+      </>}
 
       <label>Password</label>
       <input
@@ -69,7 +75,7 @@ export default function Step5({ next, back, data, handleData }) {
         onChange={handlePassword}
       />
 
-      <section className="back-next-btn">
+     {isbording && <section className="back-next-btn">
         <button onClick={back}>Back</button>
 
         {passwordMatch &&
@@ -78,7 +84,26 @@ export default function Step5({ next, back, data, handleData }) {
               Next
             </button>
           )}
+      </section>}
+
+      {!isbording &&  <>
+       <section className="terms">
+        <input type="checkbox"  checked={checkbox} id="checkbox" onClick={handleCheckBox} required />
+        <h4>Read all Terms & condition before click the next </h4>
+       </section>
+       <section className="back-next-btn">
+        <button onClick={back}>Back</button>
+
+        {passwordMatch &&
+          password.confirmpassword !== "" && checkbox &&(
+            <button onClick={submit} style={{backgroundColor:"red",color:"white"}}>
+              Submit
+            </button>
+          )}
       </section>
+      </>
+       
+       }
     </>
   );
 }

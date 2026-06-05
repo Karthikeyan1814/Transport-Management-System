@@ -1,19 +1,28 @@
 
-export default function Step4({next,back,data,handleData}){
+import { useState } from "react"
+export default function Step6({submit,back,data,handleData}){
+    
+
+      const[checkbox,setCheckBox]=useState(false);
+    const handleCheckBox = (e) => {
+  setCheckBox(e.target.checked);
+};
+    
     return(
         <>
-        <label>Bording Point</label>
+        <label style={{color:"red"}}>Bording Point</label>
         <input type="text" value={data.bordingpoint} name="bordingpoint" onChange={handleData}/>
-       <section>
-        <input type="checkbox" id="checkbox" />
+       <section className="terms">
+        <input type="checkbox" id="checkbox" checked={checkbox} onClick={handleCheckBox} required />
         <h4>Read all Terms & condition before click the next </h4>
        </section>
          
       
         <section className="back-next-btn">
             <button onClick={back}>Back</button>
-            <button onClick={next}>Next</button>
-        </section>
+            {checkbox &&  <button onClick={submit} style={{backgroundColor:"red",color:"white"}}>Submit</button>
+       }
+            </section>
         </>
     )
 }

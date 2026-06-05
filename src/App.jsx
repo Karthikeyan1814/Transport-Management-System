@@ -5,6 +5,7 @@
 // import StaffPanel from "./component/StaffPanel"
 // import Studentpanel from "./component/Studentpanel"
 // import { Route ,Routes } from "react-router-dom"
+import Home from "./pages/Home"
 import "./App.css"
 import SignIn from "./pages/SignIn"
 function App() {
@@ -20,7 +21,7 @@ function App() {
       
     </Routes> */}
 
-    <SignIn />
+    <Home />
  
     </>
   )

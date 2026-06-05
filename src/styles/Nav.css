@@ -1,0 +1,62 @@
+.nav-container{
+    min-height: 15vh;
+    width: 100%;
+    font-family: var(--font3);
+    color: white;
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--bg-main);
+}
+
+.main-logo ,.nav-options, .sign-inup-btn{
+     display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+
+}
+.main-logo{
+    height: 100%;
+    width: 25%;
+    padding: 0px 20px;
+    gap: 10px;
+}
+.main-logo img{
+    height: 11vh;
+}
+.main-logo h2{
+    font-family: var(--font4);
+    color: white;
+}
+.nav-options{
+    list-style: none;
+    color: var(--primary);
+   padding: 0px 20px;
+    height: 100%;
+    width: 50%;
+    color: white;
+    cursor: pointer;
+}
+.sign-inup-btn{
+    width: 25%;
+    height: 100%;
+    padding: 0px 20px;
+    gap: 20px;
+}
+.sign-inup-btn button{
+    width: 80px;
+    cursor: pointer;
+    height: 40px;
+    border: 1px solid var(--primary);
+    border-radius: 8px;
+}
+.sign-inup-btn button:nth-child(1){
+    background-color: var(--primary);
+    color: black;
+}
+.sign-inup-btn button:nth-child(2){
+    background-color: var(--bg-main);
+    color: var(--primary);
+}

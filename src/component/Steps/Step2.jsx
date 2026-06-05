@@ -9,7 +9,7 @@ export default function Step2({next,back,data,handleData}){
            <label>Email</label>
         <input type="email" value={data.email} name="email" onChange={handleData}/>
           <label>Mobile</label>
-        <input type="number" value={data.number} name="number" onChange={handleData}/>
+        <input type="number" value={data.phone} name="phone" onChange={handleData}/>
       
         <section className="back-next-btn">
             <button onClick={back}>Back</button>
