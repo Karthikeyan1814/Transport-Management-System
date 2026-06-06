@@ -1,5 +1,5 @@
 .nav-container{
-    min-height: 15vh;
+    min-height: 10vh;
     width: 100%;
     font-family: var(--font3);
     color: white;
@@ -8,6 +8,9 @@
     align-items: center;
     gap: 30px;
     background-color: var(--bg-main);
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .main-logo ,.nav-options, .sign-inup-btn{

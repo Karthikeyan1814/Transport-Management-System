@@ -1,0 +1,63 @@
+.route-form-cont{
+    background-color: red;
+    width: 99%;
+    max-height: max-content;
+    padding: 30px;
+    display: grid;
+    place-content: center;
+    font-family: var(--font3);
+    border-radius: 10px;
+    border: 1px solid gray;
+    background-color: var(--bg-gray);
+    margin-bottom: 100px;
+}
+.route-top{
+    display: grid;
+    grid-template-columns: 300px 500px;
+    gap: 20px;
+   
+}
+.route-bottom{
+     margin-top: 30px;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px 1fr 100px;
+    gap: 20px;
+
+}
+.route-top input ,.route-bottom input {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    min-height: 30px;
+    padding: 0px 20px;
+}
+.red-btn{
+    border: none;
+    font-family: var(--font3);
+    font-weight: 700;
+    box-shadow: var(--black-shadow);
+    border-radius: 5px;
+}
+.routes-table-data{
+    background-color:var(--bg-gray);
+    border-radius: 10px;
+    width: 100%;
+    height: max-content;
+    padding: 30px 10px;
+    text-align: center;
+     border-spacing: 9px;
+     font-size: medium;
+}
+.routes-table-data thead{
+    height: 30px;
+    color: var(--accent);
+}
+.routes-table-data tr{
+   
+}
+.routes-rows{
+    height: 40px;
+    outline:0.4px solid rgba(128, 128, 128, 0.364);
+    border-radius: 10px;
+    font-size: small;
+}

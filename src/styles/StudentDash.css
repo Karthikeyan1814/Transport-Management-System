@@ -1,0 +1,34 @@
+.studentdash-container{
+    color: white;
+    font-family: var(--font3);
+    background-color: black;
+    position: relative;
+    min-height: 100vh;
+    padding: 53vh 1vw 0px 16vw;
+}
+.student-shortcut1{
+    height: 22vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+  
+}
+.student-shot1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-family: var(--font3);
+    font-size: small;
+    gap: 10px;
+      background-color:var(--bg-gray);
+    height: 100%;
+    padding: 0px 30px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    line-height: 25px;
+}
+.student-shot1 p{
+    font-size: small;
+}

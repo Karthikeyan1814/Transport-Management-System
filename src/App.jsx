@@ -7,7 +7,10 @@
 // import { Route ,Routes } from "react-router-dom"
 import Home from "./pages/Home"
 import "./App.css"
+import StudentDashboard from "./pages/StudentDashboard"
+import Sidebar from "./component/Sidebar"
 import SignIn from "./pages/SignIn"
+import RouteForm from "./component/RouteForm"
 function App() {
   return (
     <>
@@ -21,8 +24,7 @@ function App() {
       
     </Routes> */}
 
-    <Home />
- 
+    <StudentDashboard />
     </>
   )
 }

@@ -18,6 +18,8 @@
  --bg-secondary:#0D1525;
  --card:#1C1F28;
 
+ --bg-gray:#1c1f28a7;
+
  --primary:#F5C400;
  --primary-hover:#FFD60A;
  --accent:#FFB000;
@@ -25,5 +27,10 @@
  --text:#FFFFFF;
  --text-secondary:#C8C8C8;
  --muted:#7A7A7A;
+
+ --black-shadow:2px 4px 8px rgb(0, 0, 0,0.12),
+                2px 3px 9px rgb(0, 0, 0,0.12),
+                2px 4px 8px rgb(0, 0, 0,0.12),
+                2px 4px 8px rgb(0, 0, 0,0.12);
 }
 
