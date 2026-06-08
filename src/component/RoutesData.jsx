@@ -35,7 +35,7 @@ export default function RoutesData(){
          ]);
     return(
         <div >
-               <h2 style={{padding:"10px",color:"var(--accent)"}}>Avaliable Routes</h2>
+               <h2 style={{padding:"30px"}}>Avaliable Routes</h2>
             <table className="routes-table-data">
               
                 <thead>
@@ -58,7 +58,7 @@ export default function RoutesData(){
             stops:[] */}
                 <tbody>
                  {obj.map((data,index)=>(
-                    <tr className="routes-rows">
+                    <tr className="routes-rows" key={index}>
                         <td>{data.routeno}</td>
                         <td>{data.busno}</td>
                         <td>{data.routename}</td>
@@ -69,7 +69,9 @@ export default function RoutesData(){
                     </tr>
                  ))}
                 </tbody>
+                <span style={{color:"var(--accent)",marginTop:"30px"}}>View All -&gt;</span>
             </table>
+            
         </div>
     )
 }

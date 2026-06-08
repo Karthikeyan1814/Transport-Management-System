@@ -1,12 +1,12 @@
 .important-box{
-    width: 83%;
+    width: 100%;
     height: 38vh;
     background-color: black;
     border-radius: 10px;
     border: 1px solid gray;
-    top: 12vh;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
     left: 16vw;
-    position: absolute;
 }
   /* box-shadow: inset 2px 4px 8px rgba(231, 185, 0, 0.489),
                inset 2px 3px 9px rgba(245, 196, 0, 0.479),

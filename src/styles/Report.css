@@ -1,0 +1,41 @@
+.report-container{
+    width: 100%;
+    height: max-content;
+    background-color: var(--bg-gray);
+    margin-top: 20px;
+    padding: 65px;
+    border-radius: 10px;
+    font-family: var(--font3);
+    
+}
+.report-form{
+    display: grid;
+    margin-top: 10px;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+.report-form select{
+    height: 40px;
+    background-color: var(--bg-gray);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid gray;
+    font-family: var(--font3);
+    font-weight: 700;
+}
+.report-form textarea{
+    min-height: 100px;
+    max-height: 200px;
+    background-color: var(--bg-gray);
+    border-radius: 10px;
+    padding: 10px;
+    color: var(--accent);
+}
+.report-btn{
+    height: 40px;
+    min-width: 100px;
+    box-shadow: var(--black-shadow);
+    background-color: var(--accent);
+    font-family: var(--font4);
+}

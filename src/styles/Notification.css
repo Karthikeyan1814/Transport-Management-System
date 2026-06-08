@@ -1,0 +1,58 @@
+.notification-container{
+     min-width: 50%;
+    height: max-content;
+    padding: 50px;
+    font-family: var(--font3);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.notifycard{
+background:var(--bg-gray);
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+overflow:hidden;
+}
+
+.notify-header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.notify-content{
+margin-top:15px;
+padding-top:10px;
+border-top:1px solid gray;
+line-height:1.5;
+animation:dropdown .3s ease;
+}
+
+@keyframes dropdown{
+
+from{
+opacity:0;
+max-height:0;
+}
+
+to{
+opacity:1;
+max-height:200px;
+}
+
+}
+.yellowdot{
+    height: 10px;
+    width: 10px;
+    background-color: var(--accent);
+    border-radius: 50%;
+}
+.row-align{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}

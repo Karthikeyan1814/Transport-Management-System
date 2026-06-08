@@ -21,72 +21,86 @@ import {
 import {
     BsCalendarCheck
 } from "react-icons/bs"
+import { NavLink } from "react-router-dom";
+import {useState}from "react"
 export default function Sidebar() {
+
     return (
         <div className="sidebar-container">
             <ul className="sidebar">
 
                 <li>
-                    <MdDashboard size={22} />
+                  <NavLink to={"/studentDashboard"} >
+                      <MdDashboard size={22} />
                     Dashboard
+                  </NavLink>
+                </li>
+                    
+                <li>
+                   <NavLink to={"profile"}>
+                         <FaUser size={22} />
+                          My Profile
+                    </NavLink>
                 </li>
 
                 <li>
-                    <FaUser size={22} />
-                    My Profile
+                    <NavLink to={"routesData"}>
+                        <FaBus size={22} />
+                        Bus Routes
+                    </NavLink>
                 </li>
 
                 <li>
-                    <FaBus size={22} />
-                    Bus Routes
-                </li>
-
-                <li>
-                    <MdLocationOn size={22} />
+                    <NavLink to={"sharelocation"} >
+                        <MdLocationOn size={22} />
                     Live Location
+                    </NavLink>
                 </li>
 
                 <li>
-                    <MdReportProblem size={22} />
+                    <NavLink to={"shareReport"}>
+                        <MdReportProblem size={22} />
                     Report Issue
+                    </NavLink>
                 </li>
 
                 <li>
-                    <IoChatboxOutline size={22} />
+                    <NavLink to={"messages"}>
+                        <IoChatboxOutline size={22} />
                     Messages
+                    </NavLink>
                 </li>
 
                 <li>
-                    <FaBell size={22} />
+                    <NavLink to={"notification"}>
+                        <FaBell size={22} />
                     Notifications
+                    </NavLink>
                 </li>
 
                 <li>
-                    <BsCalendarCheck size={22} />
+                    <NavLink to={"shareAttendence"}>
+                        <BsCalendarCheck size={22} />
                     Attendance
+                    </NavLink>
                 </li>
 
-                <li>
+                {/* <li>
                     <HiDocumentText size={22} />
                     Documents
-                </li>
+                </li> */}
+
+        
 
                 <li>
-                    <FaCog size={22} />
-                    Settings
-                </li>
-
-                <li>
-                    <FaSignOutAlt size={22} />
+                  <NavLink to={"/"}>
+                          <FaSignOutAlt size={22} />
                     Logout
+                  </NavLink>
                 </li>
 
             </ul>
-            <section className="sidebar-bottom">
-                <h3>Track. Ride. Reach</h3>
-                <h3>Alwayson time</h3>
-                <h3>with <span style={{color:"var(--primary)"}}>RouteX</span></h3>
-            </section>
+            
         </div>
     )
 }

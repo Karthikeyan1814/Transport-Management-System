@@ -11,7 +11,43 @@ import StudentDashboard from "./pages/StudentDashboard"
 import Sidebar from "./component/Sidebar"
 import SignIn from "./pages/SignIn"
 import RouteForm from "./component/RouteForm"
+import { Route, Routes } from "react-router-dom"
+import StudentDashComponent from "./component/StudentDashComponent"
+import LiveLocation from "./component/LiveLocation"
+import RoutesData from "./component/RoutesData"
+import Report from "./component/Report"
+import AttedanceFillUp from "./component/AttendanceFillUp"
+import Notification from "./component/Notification"
+import Message from "./component/Message"
+import { useState } from "react"
+import Profile from "./component/Profile"
 function App() {
+  const [user] = useState({
+
+domain:"student",
+
+firstname:"Karthikeyan",
+lastname:"M",
+
+email:"karthi23@gmail.com",
+phone:"9876543210",
+
+dob:"2004-09-14",
+date:"2023-06-01",
+
+dept:"Information Technology",
+currentyear:"3",
+
+parentname:"Murugan",
+parentmobile:"9876543222",
+
+address:"Salem, Tamil Nadu",
+pincode:"636001",
+
+bordingpoint:"New Bus Stand",
+organization:"ABC Engineering College"
+
+})
   return (
     <>
     {/* <Routes>
@@ -23,8 +59,20 @@ function App() {
       <Route path="/Studentpanel" element={<Studentpanel />}></Route>
       
     </Routes> */}
+    <Routes >
+      <Route path="/studentDashboard" element={<StudentDashboard />}>
+          <Route index element={<StudentDashComponent />}></Route>
+          <Route path="sharelocation" element={<LiveLocation />}></Route>
+          <Route path="routesData" element={<RoutesData />}></Route>
+          <Route path="shareReport" element={<Report />}></Route>
+          <Route path="shareAttendence" element={<AttedanceFillUp />}></Route>
+          <Route path="notification" element={<Notification />}></Route>
+          <Route path="messages" element={<Message />}></Route>
+          <Route path="profile" element={<Profile user={user} />}></Route>
+      </Route>
 
-    <StudentDashboard />
+      <Route path="/" element={<SignIn />}/>
+    </Routes>
     </>
   )
 }

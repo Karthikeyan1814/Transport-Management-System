@@ -1,0 +1,107 @@
+.profile-container{
+
+background:var(--bg-gray);
+padding:30px;
+border-radius:15px;
+font-family:var(--font3);
+color:white;
+width:80%;
+margin:auto;
+margin-top:20px;
+
+}
+
+.profile-header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding-bottom:20px;
+border-bottom:1px solid gray;
+
+}
+
+.profile-info h1{
+margin-bottom:10px;
+}
+
+.profile-info p{
+
+color:var(--primary);
+margin-bottom:5px;
+
+}
+
+.profile-image{
+
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+border:3px solid var(--primary);
+
+}
+
+.edit-section{
+
+display:flex;
+justify-content:flex-end;
+margin:20px 0;
+
+}
+
+.edit-section button{
+
+padding:10px 20px;
+border:none;
+border-radius:8px;
+cursor:pointer;
+background:var(--primary);
+color:white;
+
+}
+
+.profile-form{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+
+}
+
+.input-group{
+
+display:flex;
+flex-direction:column;
+gap:8px;
+
+}
+
+.input-group input,
+.input-group textarea{
+
+padding:12px;
+border-radius:8px;
+border:1px solid gray;
+background:#222;
+color:white;
+
+}
+
+.input-group textarea{
+
+height:100px;
+resize:none;
+
+}
+
+/* disabled look */
+
+input:disabled,
+textarea:disabled{
+
+background:#181818;
+opacity:.7;
+cursor:not-allowed;
+
+}

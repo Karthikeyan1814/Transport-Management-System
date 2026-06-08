@@ -4,7 +4,7 @@
     background-color: black;
     position: relative;
     min-height: 100vh;
-    padding: 53vh 1vw 0px 16vw;
+    padding: 9vh 1vw 0vh 16vw;
 }
 .student-shortcut1{
     height: 22vh;
@@ -31,4 +31,8 @@
 }
 .student-shot1 p{
     font-size: small;
+}
+.split-into-two{
+    display: flex;
+    gap: 10px;
 }
