@@ -25,7 +25,7 @@ export default function SignUpForm(handleSignUp){
             parentname:"",
             parentmobile:0,
             address:"",
-            pincode:"",
+            pincode:0,
             password:"",
             bordingpoint:"",
             organization:""

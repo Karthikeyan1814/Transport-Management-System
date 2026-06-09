@@ -1,29 +1,17 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
 import "../styles/Profile.css"
-
+import { useOutletContext } from "react-router-dom";
 export default function Profile() {
 
     const [editMode, setEditMode] = useState(false)
-
-    const [user, setUser] = useState({
-
-        domain: "student",
-        firstname: "Karthikeyan",
-        lastname: "M",
-        email: "karthi23@gmail.com",
-        phone: "9876543210",
-        dob: "2004-09-14",
-        dept: "Information Technology",
-        currentyear: "3",
-        parentname: "Murugan",
-        parentmobile: "9876543000",
-        address: "Salem,Tamil Nadu",
-        pincode: "636001",
-        bordingpoint: "New Bus Stand",
-        organization: "ABC Engineering College"
-
+    console.log("profile");
+    
+    const [user,setUser]=useState({})
+    
+    useEffect(()=>{
+        const data=useOutletContext();
+        setUser(data)
     })
-
     const handleChange = (e) => {
 
         const { name, value } = e.target

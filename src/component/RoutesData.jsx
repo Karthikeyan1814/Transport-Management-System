@@ -69,9 +69,9 @@ export default function RoutesData(){
                     </tr>
                  ))}
                 </tbody>
-                <span style={{color:"var(--accent)",marginTop:"30px"}}>View All -&gt;</span>
-            </table>
-            
+                </table>
+             <span style={{color:"var(--accent)",marginTop:"30px"}}>View All -&gt;</span>
+           
         </div>
     )
 }

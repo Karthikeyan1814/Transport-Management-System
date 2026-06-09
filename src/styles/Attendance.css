@@ -39,3 +39,28 @@
     background-color: var(--accent);
     font-family: var(--font4);
 }
+.share-att-container{
+    background-color: var(--bg-gray);
+    width: 100%;
+    padding: 40px;
+    margin: 3vh 0vw 10vh 0vw;
+    font-family: var(--font3);
+}
+.share-att-form{
+    display: grid;
+    gap: 30px;
+    margin-top: 30px;
+}
+.share-att-form p{
+    color: red;
+    font-weight: 400;
+}
+.submit-btn{
+    height: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--accent);
+    font-weight: 500;
+    font-family: var(--font4);
+}

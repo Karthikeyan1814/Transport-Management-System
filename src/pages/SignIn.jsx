@@ -8,6 +8,7 @@ import SignUpForm from "../component/SignUpForm";
 export default function SignIn() {
      const navigate = useNavigate();
 
+     
      const [activedomain,setActiveDomain]=useState("student")
     const [currentpage,setCurretPage]=useState("signin");
 
@@ -36,15 +37,13 @@ export default function SignIn() {
         console.log(logdetail)
                 try{
                     const  data=await setSignIn(logdetail);
-                    if (data == "student login") {
-                    navigate("/Studentpanel")
-                } else if (data == "admin login") {
-                    navigate("/Admin")
-                } else if (data == "staff login") {
-                    navigate("/Staffpanel")
-                } else {
-                    alert(data)
-                }
+                    sessionStorage.setItem("userData",JSON.stringify(data));
+                    console.log(data);
+                    if(data.role === "student")navigate("/studentDashboard",{state:{
+                        user:data
+                    }});
+                    // if(data.role === "student")navigate("/studentDashboard",data);
+                    // if(data.role === "student")navigate("/studentDashboard",data);
                 }catch(error){
                     alert("Somthing Went Wrong")
                 }
@@ -62,12 +61,12 @@ export default function SignIn() {
             {currentpage==="signin" && <section className="signin-section2">
                 <h1>SignIn</h1>
                 <section className="domain-selection">
-                    <button name="domain" className={activedomain==="student"?"active-domain":" "} value="Student" onClick={()=>(handleDomain("student"))}>Student</button>
-                    <button name="domain" className={activedomain==="staff"?"active-domain":" "} value="Staff" onClick={()=>(handleDomain("staff"))}>Staff</button>
-                    <button name="domain" className={activedomain==="organization"?"active-domain":" "} value="Organization" onClick={()=>(handleDomain("organization"))}>Organization</button>
+                    <button name="domain" className={activedomain==="student"?"active-domain":" "} value="student" onClick={()=>(handleDomain("student"))}>Student</button>
+                    <button name="domain" className={activedomain==="staff"?"active-domain":" "} value="staff" onClick={()=>(handleDomain("staff"))}>Staff</button>
+                    <button name="domain" className={activedomain==="organization"?"active-domain":" "} value="organization" onClick={()=>(handleDomain("organization"))}>Organization</button>
                     <button name="domain" className={activedomain==="admin"?"active-domain active-revet":" "} value="admin" onClick={()=>(handleDomain("admin"))}><img id="repair-logo"src=".//admin-logo.png" alt="" /></button>
                 </section>
-                <form className="signin-form">
+                <form className="signin-form" onSubmit={logactive}>
                     <label htmlFor="">Email</label>
                     <input type="email" required name="email" value={logdetail.email} onChange={handledata} />
 

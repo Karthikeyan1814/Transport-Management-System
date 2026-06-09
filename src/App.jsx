@@ -21,6 +21,8 @@ import Notification from "./component/Notification"
 import Message from "./component/Message"
 import { useState } from "react"
 import Profile from "./component/Profile"
+import StaffDashboard from "./pages/StaffDashboard"
+import ShareAttendance from "./component/ShareAttendance"
 function App() {
   const [user] = useState({
 
@@ -72,6 +74,20 @@ organization:"ABC Engineering College"
       </Route>
 
       <Route path="/" element={<SignIn />}/>
+
+
+      <Route path="/staffDashboard" element={<StaffDashboard />}>
+          <Route index element={<StudentDashComponent />}></Route>
+          <Route path="sharelocation" element={<LiveLocation />}></Route>
+          <Route path="shareAttendance" element={<ShareAttendance />}></Route>
+          <Route path="routeData" element={<RoutesData />}></Route>
+          <Route path="shareReport" element={<Report />}></Route>
+          <Route path="Attendence" element={<AttedanceFillUp />}></Route>
+          <Route path="notification" element={<Notification />}></Route>
+          <Route path="messages" element={<Message />}></Route>
+          <Route path="importantMessage" element={<Message />}></Route>
+          <Route path="profile" element={<Profile user={user} />}></Route>
+      </Route>
     </Routes>
     </>
   )

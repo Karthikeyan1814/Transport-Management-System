@@ -1,7 +1,8 @@
 import { FaLocationPin, FaLocationPinLock } from "react-icons/fa6"
 import"..//styles/StudentDash.css"
 import ImportantMessage from "../component/ImportantMessage"
-import{useState}from "react"
+import{useState ,useEffect}from "react"
+import { useLocation } from "react-router-dom"
 import {
     FaUser,
     FaBus, 
@@ -14,17 +15,19 @@ import {
 import RoutesData from "../component/RoutesData"
 import Report from "../component/Report"
 import LiveLocation from "./LiveLocation"
-export default function StudentDashComponent(){
+
+export default function StudentDashComponent({userdata}){
+
     return(
         <>
-            <ImportantMessage />
+            <ImportantMessage userData={userdata} />
             <section className="student-shortcut1">
                 <div className="student-shot1">
                     <FaUser color="var(--primary)" id="bell" size={33}/>
                     <section>
                         <p>Welcome Back</p>
-                        <h2>Karthi Keyan</h2>
-                        <p>Roll no:98381</p>
+                        <h2>{userdata}</h2>
+                        <p>{userdata}</p>
                         </section>
                 </div>
                 <div className="student-shot1">
@@ -59,10 +62,10 @@ export default function StudentDashComponent(){
                 </div>
             </section>
             {/* <RouteForm /> */}
-            <RoutesData isdash={true}/>
+            <RoutesData isdash={true} userData={userdata}/>
             <section className="split-into-two">
                 <Report />
-            <LiveLocation />
+            <LiveLocation userData={userdata}/>
             </section>
         </>
     )

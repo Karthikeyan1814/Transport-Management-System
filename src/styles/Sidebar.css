@@ -12,8 +12,7 @@
     position:fixed;
     left:0;
     top:12vh;
-
-    padding:10px;
+    padding:7px;
 }
 
 /* Remove bullet points */
@@ -25,7 +24,7 @@
 
 /* spacing between items */
 .sidebar li{
-    margin-bottom:8px;
+    margin-bottom:5px;
 }
 
 /* Style NavLink */
